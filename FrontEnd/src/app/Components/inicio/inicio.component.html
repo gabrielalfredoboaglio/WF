@@ -1,0 +1,27 @@
+
+
+<!-- Usuarios sin rol -->
+<app-page-user *appVistaRoles="['ROLE_USER']" ></app-page-user>
+
+<!-- Clientes -->
+<mat-tab-group *appVistaRoles="['ROLE_CUSTOMER']" color="accent">
+
+  <mat-tab label="MIS RUTINAS">
+    <div class="fondo-rutina flex justify-center items-star max-h-[100vh]"><app-rutina></app-rutina></div>
+  </mat-tab>
+  <mat-tab label="TIEMPO"> <app-cronometro></app-cronometro> </mat-tab>
+
+
+    <mat-tab label="MI PERFIL">
+      <div class="flex justify-center items-center max-h-[100vh]">
+      <app-perfil></app-perfil>
+    </div>
+    </mat-tab>
+
+
+
+
+</mat-tab-group>
+
+<!-- Profesores -->
+<app-ver-clientes *appVistaRoles="['ROLE_ADMIN','ROLE_COACH']" ></app-ver-clientes>

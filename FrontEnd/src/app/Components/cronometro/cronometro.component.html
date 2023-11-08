@@ -1,0 +1,70 @@
+<div class="fondo-cronometro md:grid place-items-center">
+
+  <div *ngIf="tipo==='Cronometro' " class="cronometro-container min-w-full min-h-[100vh]  md:min-w-[50vw] lg:min-w-[25vw] md:min-h-[60vh] md:py-16 md:rounded-xl" >
+    <div class="cronometro-buttons pb-16 ">
+      <button mat-raised-button color="primary"(click)="cambiar('Temporizador')">Temporizador</button>
+
+    </div>
+      <h1 class="cronometro-time ">{{minutos | number:'2.0-0'}}:{{segundos  | number:'2.0-0'}}</h1>
+      <div class="cronometro-buttons">
+
+          <mat-icon *ngIf="!intervaloCronometro" (click)="empezarCronometro()"color="accent" >play_arrow</mat-icon>
+
+         <mat-icon *ngIf="intervaloCronometro" (click)="pararCronometro()"color="accent" >pause</mat-icon>
+
+         <mat-icon  (click)="reiniciarCronometro()" color="accent">stop</mat-icon>
+
+
+      </div>
+
+    </div>
+
+    <div  id="mi-contenedor" *ngIf="tipo==='Temporizador' " class="temporizador-container  min-w-full min-h-[100vh]  md:min-w-[50vw] lg:min-w-[25vw] md:min-h-[60vh] md:py-16 md:rounded-xl" >
+      <div class="cronometro-buttons pb-8">
+        <button mat-raised-button color="accent"class="temporizador-button " (click)="cambiar('Cronometro')">
+          <h2>Cronometro</h2>
+          </button>
+      </div>
+      <div *ngIf="Ejercicio"   >
+        <h1>Ejercicio</h1>
+        <h1  class="temporizador-time">
+        <div class="text-center" >{{ tiempoE }}</div>
+        </h1>
+      </div>
+         <div *ngIf="!Ejercicio" >
+          <h1>Descanso</h1>
+          <h1 class="temporizador-time">
+            <div class="text-center" >{{ tiempoD }}</div>
+          </h1>
+         </div>
+
+        <div class="cronometro-buttons">
+
+          <mat-icon color="basic" *ngIf="!intervalo" (click)="empezar()">play_arrow</mat-icon>
+          <mat-icon color="basic"*ngIf="intervalo" (click)="pausar()" >pause</mat-icon>
+          <mat-icon color="basic"(click)="reiniciar()">stop</mat-icon>
+        </div>
+
+        <div>
+          <div class="row">
+            <div class="col-6"> Ejercicio:</div>
+            <div class="col-2"><input class="number" type="number" [(ngModel)]="tiempoEjercicio" /></div>
+            <div class="col-4">Seg.</div>
+          </div>
+          <div class="row">
+            <div class="col-6"> Descanso:</div>
+            <div class="col-2"><input class="number" type="number" [(ngModel)]="tiempoDescanso" /></div>
+            <div class="col-4">Seg.</div>
+          </div>
+          <div class="row">
+            <div class="col-6">Series:</div>
+            <div class="col-3"><input class="number" type="number" [(ngModel)]="numSeries" /></div>
+
+          </div>
+        </div>
+
+      </div>
+</div>
+
+
+

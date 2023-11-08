@@ -1,0 +1,18 @@
+<div *ngIf="user$ != null" class="fondo-perfil min-w-[100vw] max-h-[80vh] grid place-items-star pt-8 md:pt-32">
+  <div class="contenedor-perfil mt-4">
+    <div class="contenedor-img-perfil">
+      <img [src]="previewImageUrl" />
+    </div>
+    <div class="contenido-perfil">
+      <div class="detalles gap-3">
+        <h2 class="card-title fs-4 mb-1 ">{{user$.name}}</h2>
+        <p class="card-text fs-6 mb-1" *ngIf="user$.sex === 'MALE'">Sexo: Masculino</p>
+        <p class="card-text fs-6 mb-1" *ngIf="user$.sex === 'FEMALE'">Sexo: Femenino</p>
+        <p class="card-text fs-6 mb-3">Edad: {{user$.age}} años</p>
+        <div class="h-50 bg-dark text-white align-middle p-2 mb-2 border-bottom">Altura: {{user$.height}} cm</div>
+        <div class="h-50 bg-warning text-dark align-middle mb-2 p-2">PESO: {{user$.weight}} Kg</div>
+        <button class="mt-3 " (click)="EditUsuario(user$)" mat-raised-button color="accent"><mat-icon>edit</mat-icon>Actualizar  perfil</button>
+      </div>
+    </div>
+  </div>
+</div>

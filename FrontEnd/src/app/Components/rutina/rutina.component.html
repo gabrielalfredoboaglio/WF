@@ -1,0 +1,43 @@
+<div class="mx-1 mt-8">
+  <mat-accordion  >
+    <mat-expansion-panel   *ngFor="let rutina of rutinasLista; first as isFirst" [expanded]="isFirst">
+      <mat-expansion-panel-header class="acordion-cabecera mx-2 ">
+        {{rutina.title}}
+      </mat-expansion-panel-header>
+      <div class="tarjetas-ejercicios">
+        <div class="card  mb-4 mt-3" *ngFor="let ejercicio of rutina.exercises">
+          <div class="card-header ps-3 p-1">
+            <div class="row align-items-center ">
+              <img class="p-1 ps-2 " src="{{ ejercicio.media}}">
+              <div class="col align-middle">
+                <h3 >{{ejercicio.title}}</h3>
+              <div class="d-flex justify-content">
+              <h4 class="mt-1 me-3 " >
+                Series: {{ejercicio.seriesNumber}} X {{ejercicio.repetitions}}
+              </h4>
+              <h4 class="mt-1">|</h4>
+              <h4 class="mb-0 ms-3 mt-1">{{ejercicio.type}} {{ejercicio.quantity}} {{ejercicio.unit}}</h4>
+              </div>
+              </div>
+            </div>
+
+
+
+          </div>
+          <div class="card-body p-0 ">
+            <h5 class="card-title mb-0 ">
+
+            </h5>
+            <mat-checkbox *ngFor="let check of ejercicio.series" class="example-margin"></mat-checkbox>
+
+          </div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+
+
+
+

@@ -1,0 +1,16 @@
+<mat-toolbar *appVistaRoles="['ROLE_ADMIN', 'ROLE_COACH','ROLE_CUSTOMER']"  class="sticky right-0 left-0 border-dark border-top-0 border-1" color="accent">
+  <a routerLink="/inicio">
+  <img src="./assets/img/logo-tipografico-gris-oscuro-WF-01.png">
+</a>
+  <span class="example-spacer"></span>
+  <div *appVistaRoles="['ROLE_ADMIN', 'ROLE_COACH']" >
+    <button mat-button routerLink="/inicio">Clientes</button>
+    <button mat-button routerLink="/ejercicios">Ejercicios</button>
+  </div>
+
+  <span class="example-spacer"></span>
+  <button mat-icon-button (click)="logout()" class="example-icon" matTooltip="Cerrar sesión"
+    aria-label="Example icon-button with menu icon">
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>

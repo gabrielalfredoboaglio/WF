@@ -1,0 +1,77 @@
+.mat-accordion {
+  min-width: 500px;
+}
+
+.mat-mdc-form-field + .mat-mdc-form-field {
+  margin-left: 8px;
+}
+.tarjetas-ejercicios {
+  border: none;
+
+}
+.tarjetas-ejercicios h3,h4 {  
+  font-family: 'Comfortaa';
+  font-weight: 500;
+  font-size: 1em;
+  
+}
+
+.tarjetas-ejercicios h3 {
+  text-transform: uppercase;
+
+}
+.mat-expansion-panel {
+  background-color: #FFD740;
+}
+
+
+
+.card-header{
+  background-color: #303030;
+  color: #fff;
+}
+
+.card-header img {
+  width: 50px;
+}
+
+.card {
+  margin-left: -1em;
+  margin-right: -1em;
+}
+
+.acordion-cabecera {
+  background-color: #303030;
+  color: #fff !important;
+  font-family: 'Comfortaa';  
+  font-size: 1em;
+  text-transform: uppercase;
+  border: 1px solid #FFC107;
+  
+}
+
+
+.acordion-cabecera:hover {
+  background-color: #303030 !important;
+  
+}
+
+.acordion-cabecera:focus {
+  background-color: #303030 !important;
+  
+}
+
+
+.acordion-cabecera:active {
+  background-color: #303030 !important;
+}
+
+@media (min-width: 600px) { 
+  .fondo-rutinas{    
+    display: flex;    
+    justify-content: center;  
+    min-height: 100vh;
+    background-color: #ffd740;
+      
+  }
+}

@@ -1,0 +1,81 @@
+
+.example-input-label,
+.example-add-tab-button,
+.example-delete-tab-button {
+  margin: 8px;
+}
+/* Altura de cabecera donde va el logo */
+
+.header-perfil{  
+  height: 140px;
+  background-color: #ffd740;
+}
+
+/* imagen de perfil de cliente */
+
+.images-perfil {
+  width: 175px;
+  height: 175px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 11%;
+  top: 5%;
+  z-index: 900;  
+}
+
+/* Borde que separa la informacion de peso */
+
+
+@media (max-width: 768px) { 
+  .images-perfil {   
+    left: 25%;    
+    top: 15%;
+      
+  }
+  .header-perfil{  
+    height: 160px;
+  }
+  .card-peso {  
+    border: none;
+    
+  }
+}
+
+@media (max-width: 500px) { 
+  .images-perfil {  
+    top: 11%;
+    
+  }
+ 
+}
+
+/* Quitar sombra de card */
+
+.mat-mdc-card{
+  box-shadow: none;
+  
+}
+/* Quitar padding debajo de card*/
+.mdc-card {
+  margin-bottom: 0px !important;
+}
+/* Pestañas de Rutinas*/
+
+.mat-mdc-tab-labels{
+  background-color: #303030;
+}
+.mdc-tab__text-label{
+  font-size: 1em;
+  font-family: 'Comfortaa';
+  font-weight: 700;
+  color: #fff !important;
+  
+}
+
+.mdc-tab-indicator__content {
+  height: 5px;  
+  background-color: #ffd740;
+  
+}

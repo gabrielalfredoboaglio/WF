@@ -1,0 +1,40 @@
+.profile__image {
+  position: relative;
+  width: 6rem;
+  height: auto;
+  margin: auto;
+}
+
+@media (width >=1024px) {
+  .profile__image {
+    width: 6rem;
+  }
+}
+
+@media (width >=500px) {
+  .profile__image {
+    margin: 0;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.profile__image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile__image > button {
+  position: absolute;
+  bottom: 8px;
+  right: -8px;
+}
+
+@media (width >=500px) {
+  .profile__image > button {
+    bottom: 8px;
+    right: 0;
+  }
+}

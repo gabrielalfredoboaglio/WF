@@ -1,0 +1,47 @@
+<!-- Perfil del Usuario  -->
+<div *ngIf="infoCliente != null" class="conteiner bg-dark ">
+  <div color="accent" class="header-perfil  pt-3">
+    <img src="./assets/img/Logo-seccion-editar-rutinas.png" class="img-fluid mx-auto d-block col-8 col-md-4 mt-2  " alt="...">
+    <button class="position-absolute top-0 end-0 mt-1 me-1 mt-sm-3 me-sm-4" routerLink="/inicio" mat-mini-fab matTooltip="Cerrar" color="warn" aria-label="Example fab with a heart icon">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </div>
+  <div  class="col-md-3 images-perfil ">
+    <img src={{img}} class="img-fluid rounded-start" alt="...">
+  </div>
+  <mat-card class="pt-5 mt-5 pt-md-0 mt-md-0 mb-4 mb-0 bg-dark text-white">
+    <mat-card-content class=" ps-0 p-md-0 pt-3 ">    
+      <div class="row g-0 justify-content-end">
+        <div class="col-md-3"></div>      
+        <div class="col-md-5">
+          <div class="card-body pt-3 ps-4 ps-md-0 ">
+            <h2 class="card-title fs-5 ">{{infoCliente.name}}</h2>
+            <p class="card-text fs-5">Sexo: {{infoCliente.sex==='MALE'?'Masculino':'Femenino'}}</p>
+            <p class="card-text fs-5"><small class="">Edad: {{infoCliente.age}} años</small></p>
+            <p class="card-text fs-5"> {{infoCliente.objective ==='undefined'? '': infoCliente.objective}}</p>
+            <p class="card-text fs-5"><small class=""> {{infoCliente.medical_indication==='undefined'?'':infoCliente.medical_indication}} </small></p>
+          </div>
+        </div>
+        <div class="card-peso mt-4 mt-md-0 col-md-3 text-center fs-4 ">
+          <div class="h-50 bg-white text-dark align-middle p-2">PESO: {{infoCliente.weight}} Kg</div>
+          <div class="h-50 bg-dark  align-middle p-2 border-bottom">ALTURA: {{infoCliente.height}} Cm</div>
+        </div>
+      </div>
+    
+    </mat-card-content>
+  </mat-card>
+</div>
+<!-- Boton para agregar rutina  -->
+<mat-toolbar class="ps-5 pe-5 bg-dark text-white " >  
+  
+  <div class="example-spacer"></div>
+  <button mat-raised-button (click)="AgregarRutina(infoCliente.id )" color="accent"><mat-icon>add</mat-icon>Agregar Rutina </button>
+  
+  
+</mat-toolbar>
+<!-- Rutinas del Usuario a editar  -->
+
+<mat-tab-group color="accent">
+  <mat-tab   *ngFor="let rutina of planCliente" [label]="rutina.title" > 
+    <app-editar-ejercicio [dataRutinas]="rutina"></app-editar-ejercicio>
+  </mat-tab> 

@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #ffc107;
+  --secondary-color: #ffd740;
+  --alpha-color: #673ab7;
+  --bg-first: #212529;
+  --bg-second: #303030;
+  --bg-third: #ffffff;
+  --text-white: #ffffff;
+  --border-color: #303030;
+  --form-error-color: #2ef8a0;
+  --font: "Comfortaa";
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Comfortaa";
+  font-size: 16px;
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: var(--font);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* clase separadora espaciador  */
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+/* Ancho de las Tablas  */
+
+table {
+  width: 100%;
+}
+
+/* clase estilos para buscador de las Tablas  */
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+/* clase estilos para header de las Tablas  */
+
+th {
+  background-color: #303030 !important;
+  color: white !important;
+}
+
+/* Fuente header de las Tablas  */
+
+.mdc-data-table__header-cell {
+  font-family: "Comfortaa";
+}
+
+/* Fuente de navbar   */
+
+.mat-toolbar {
+  font-family: "Comfortaa";
+}
+
+.mdc-data-table__header-cell {
+  font-family: "Comfortaa";
+}
+/* Cursor en pointer  */
+.pointer {
+  cursor: pointer;
+}
+/* Botón para borrar  */
+.delete {
+  color: #f44336;
+}
+
+.logo > svg path:nth-child(1),
+.logo > svg path:nth-child(2),
+.logo > svg path:nth-child(3),
+.logo > svg path:nth-child(7),
+.logo > svg path:nth-child(8) {
+  fill: var(--bg-third);
+}
+
+.logo > svg path:nth-child(4),
+.logo > svg path:nth-child(5),
+.logo > svg path:nth-child(6),
+.logo > svg path:nth-child(9) {
+  fill: var(--primary-color);
+}

@@ -1,0 +1,30 @@
+
+
+  th{
+    background-color: #303030 !important;
+    color: white;
+  }
+
+  
+  
+  td,
+  th {
+    width: 15%;
+  }
+ 
+  
+  .edit {
+    cursor: pointer;
+    color: #303030;
+  }
+
+  @media (min-width: 500px) { 
+     .mat-column-nombre {
+      word-break: break-word;
+      width: 25% !important;
+    } 
+    
+  
+     
+    }
+

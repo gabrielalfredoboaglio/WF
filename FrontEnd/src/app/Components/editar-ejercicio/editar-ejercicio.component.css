@@ -1,0 +1,41 @@
+
+
+table {
+  width: 100%;
+  font-family: 'Comfortaa';
+}
+
+.icono {
+  color: #303030;
+}
+
+.delete {
+  color: #f44336;
+}
+
+td,
+th {
+    width: 10%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+  font-family: 'Comfortaa';
+}
+
+  
+
+@media (min-width: 500px) { 
+  .mat-column-title {
+    word-break: break-word;
+    width: 25% !important;
+    }
+
+  .mat-column-acciones {
+    word-break: break-word;
+    width: 18% !important;
+    }
+
+
+    }

@@ -1,0 +1,58 @@
+<h2 mat-dialog-title>{{operacion}} Ejercicio</h2>
+<form [formGroup]="form" (ngSubmit)="addEditEjercicio()">
+    <mat-dialog-content >
+      <mat-form-field  >
+        <mat-label>Nombre</mat-label>
+        <input formControlName="nombre" matInput placeholder="Ingrese nombre" autocomplete="off">            
+        <mat-error *ngIf="form.get('nombre')?.touched && form.get('nombre')?.errors?.['required']">El campo Nombre es requerido</mat-error>
+        <mat-error *ngIf="form.get('nombre')?.touched && form.get('nombre')?.errors?.['minlength']">El campo Nombre debe tener  3 caracteres o mas </mat-error>
+        <mat-error *ngIf="form.get('nombre')?.touched && form.get('nombre')?.errors?.['maxlength']">El campo Nombre debe tener  75 caracteres o menos </mat-error>
+        
+    </mat-form-field>
+    <mat-form-field  >
+      <mat-label>Seleccione Grupo Muscular</mat-label>
+      <mat-select formControlName="grupoMuscular">
+        <mat-option *ngFor="let musculo of musculos" [value]="musculo">
+          {{musculo}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.get('grupoMuscular')?.touched && form.get('grupoMuscular')?.errors?.['required']">El campo Grupo Muscular es requerido</mat-error>
+      
+    </mat-form-field>
+    <div class="row">
+      <div class="col">
+          <mat-form-field  >
+            <mat-label>Seleccione Imagen</mat-label>
+            <mat-select formControlName="imagen">
+              <mat-option *ngFor="let imagen of imagenes" [value]="imagen.url">
+                <div class="d-flex align-items-center">
+                  <img class="me-2" src="{{imagen.url}}" width="75px" >
+                  {{imagen.name}}
+                </div>
+                
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="form.get('imagen')?.touched && form.get('imagen')?.errors?.['required']">El campo Imagen es requerido</mat-error>
+            
+          </mat-form-field> 
+      </div>
+      <div class="col">
+          <mat-form-field >
+            <mat-label>Unidad de Medida</mat-label>
+            <mat-select formControlName="unidad">
+              <mat-option *ngFor="let item of unity" [value]="item.value">
+                {{item.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>               
+
+      </div>        
+  </div>
+          
+             
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button type="button" (click)="cancelar()" mat-button >Cancelar</button>
+        <button [disabled]="form.invalid" type="submit" mat-button  >Aceptar</button>
+    </mat-dialog-actions>
+</form>

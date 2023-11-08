@@ -1,0 +1,57 @@
+<h2 mat-dialog-title>Agregar Ejercicio</h2>
+<form [formGroup]="form" (ngSubmit)="Add()">
+  <mat-dialog-content class="mat-typography">
+    <mat-form-field appearance="fill">
+      <mat-label>Ejercicio </mat-label>
+      <mat-select formControlName="exerciseId">
+        <mat-option *ngFor="let ejercicio of Ejercicios" [value]="ejercicio.id">
+          {{ ejercicio.title }} | {{ejercicio.unit|UnidadATipo }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.get('exerciseId')?.touched && form.get('exerciseId')?.errors?.['required']">Este campo es obligatorio</mat-error>
+    </mat-form-field>
+   
+    <div class="row">
+      <div class="col-md-4">
+        <mat-form-field >
+          <mat-label>Series</mat-label>
+          <input min="0" max="8" formControlName="series" matInput type="number"  />
+          <mat-error *ngIf="form.get('series')?.touched && form.get('series')?.errors?.['required']">Este campo es obligatorio</mat-error>
+       <mat-error *ngIf="form.get('series')?.touched && form.get('series')?.errors?.['max']">El numero maximo de series es 8</mat-error>
+        </mat-form-field>
+        
+      </div>
+      <div class="col-md-4">
+        <mat-form-field >
+          <mat-label>Cantidad</mat-label>
+          <input
+          min="0"
+            formControlName="quantity"
+            matInput
+            type="number"
+            
+          />
+          <mat-error *ngIf="form.get('quantity')?.touched && form.get('quantity')?.errors?.['required']">Este campo es obligatorio</mat-error>
+        </mat-form-field>
+      
+        
+      </div>
+      <div class="col-md-4">
+        <mat-form-field >
+          <mat-label>Repeticiones</mat-label>
+          <input
+          min="0"
+            formControlName="repetitions"
+            matInput
+            type="number"
+          />
+          <mat-error *ngIf="form.get('repetitions')?.touched && form.get('repetitions')?.errors?.['required']">Este campo es obligatorio</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button type="button" mat-button mat-dialog-close>Cancelar</button>
+    <button [disabled]="form.invalid" type="submit" mat-button [mat-dialog-close]="true">Aceptar</button>
+  </mat-dialog-actions>
+</form>

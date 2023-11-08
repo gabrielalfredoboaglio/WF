@@ -1,0 +1,32 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  mat-toolbar img {
+    width: 100px;
+  }
+/* Estilos Tabs  */
+.mat-mdc-tab-labels{
+  border-bottom: #303030;
+}
+
+.mdc-tab__text-label{
+  font-size: 1em;
+  font-family: 'Comfortaa';
+  font-weight: 700;
+  color: #212529 !important;
+} 
+
+.mdc-tab-indicator__content {
+  height: 4px;  
+  background-color: #303030;
+  border-top: #303030 !important;
+  
+}
+
+.fondo-rutina {
+    height: 100vh;
+    background-color: #ffd740 !important;
+    
+    
+  }

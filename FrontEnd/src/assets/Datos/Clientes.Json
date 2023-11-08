@@ -1,0 +1,81 @@
+[
+
+{
+    "id": "sjsdjnkksdj",
+    "nombre":"Rodolfo Lopez",
+    "edad":22,
+    "altura":1.80,
+    "sexo": "Hombre",
+    "peso": 150
+    
+},
+{
+    "id": "sjsdjnkksdj",
+    "nombre":"Juan Perez",
+    "edad":20,
+    "altura":1.80,
+    "sexo": "Hombre",
+    "peso": 15
+    
+},{
+    "id": "sjsdjnkksdj",
+    "nombre":"Pedro Rodriguez",
+    "edad":15,
+    "altura":1.80,
+    "sexo": "Hombre",
+    "peso": 25
+    
+},{
+    "id": "sjsdjnkksdj",
+    "nombre":"Tomas Martines",
+    "edad":32,
+    "altura":1.80,
+    "sexo": "Hombre",
+    "peso": 10
+    
+}
+,{
+    "id": "sjsdjnkksdj",
+    "nombre":"Tomas",
+    "edad":42,
+    "altura":1.80,
+    "sexo": "Hombre",
+    "peso": 15
+    
+}
+,{
+    "id": "sjsdjnkksdj",
+    "nombre":"Tomas",
+    "edad":22,
+    "altura":1.80,
+    "sexo": "Hombre",
+    "peso": 15
+    
+}
+,{
+    "id": "sjsdjnkksdj",
+    "nombre":"Tomas",
+    "edad":22,
+    "altura":1.80,
+    "sexo": "Hombre",
+    "peso": 15
+    
+}
+,{
+    "id": "sjsdjnkksdj",
+    "nombre":"Tomas",
+    "edad":22,
+    "altura":1.80,
+    "sexo": "Hombre",
+    "peso": 15
+    
+},{
+    "id": "sjsdjnkksdj",
+    "nombre":"Rodolfo",
+    "edad":22,
+    "altura":1.80,
+    "sexo": "Hombre",
+    "peso": 150
+    
+}
+]
